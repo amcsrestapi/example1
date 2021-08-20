@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "xSNyyaV8WAjpF7aYU0ewLBLK4mH8zYioo7Pwwyp1gaNJi0kPJWadJg6ziyBkqg9/MI4+0kZ9+68qH7WjbwmbNA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\richard.morris\\Documents\\GitHub\\example1\\AmcsRestApiExample1\\AmcsRestApiExample1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\richard.morris\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31019.35
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmcsRestApiExample1", "AmcsRestApiExample1.csproj", "{98535618-E776-4F08-B8B8-C3C16B0C5839}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{98535618-E776-4F08-B8B8-C3C16B0C5839}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98535618-E776-4F08-B8B8-C3C16B0C5839}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98535618-E776-4F08-B8B8-C3C16B0C5839}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98535618-E776-4F08-B8B8-C3C16B0C5839}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EA47A81D-9064-430B-8B1D-0A07C8DAED55}
+	EndGlobalSection
+EndGlobal

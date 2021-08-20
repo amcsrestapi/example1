@@ -1,0 +1,13 @@
+C:\Users\richard.morris\Documents\GitHub\example1\AmcsRestApiExample1\bin\Debug\netcoreapp3.1\AmcsRestApiExample1.exe
+C:\Users\richard.morris\Documents\GitHub\example1\AmcsRestApiExample1\bin\Debug\netcoreapp3.1\AmcsRestApiExample1.deps.json
+C:\Users\richard.morris\Documents\GitHub\example1\AmcsRestApiExample1\bin\Debug\netcoreapp3.1\AmcsRestApiExample1.runtimeconfig.json
+C:\Users\richard.morris\Documents\GitHub\example1\AmcsRestApiExample1\bin\Debug\netcoreapp3.1\AmcsRestApiExample1.runtimeconfig.dev.json
+C:\Users\richard.morris\Documents\GitHub\example1\AmcsRestApiExample1\bin\Debug\netcoreapp3.1\AmcsRestApiExample1.dll
+C:\Users\richard.morris\Documents\GitHub\example1\AmcsRestApiExample1\bin\Debug\netcoreapp3.1\AmcsRestApiExample1.pdb
+C:\Users\richard.morris\Documents\GitHub\example1\AmcsRestApiExample1\obj\Debug\netcoreapp3.1\AmcsRestApiExample1.csprojAssemblyReference.cache
+C:\Users\richard.morris\Documents\GitHub\example1\AmcsRestApiExample1\obj\Debug\netcoreapp3.1\AmcsRestApiExample1.AssemblyInfoInputs.cache
+C:\Users\richard.morris\Documents\GitHub\example1\AmcsRestApiExample1\obj\Debug\netcoreapp3.1\AmcsRestApiExample1.AssemblyInfo.cs
+C:\Users\richard.morris\Documents\GitHub\example1\AmcsRestApiExample1\obj\Debug\netcoreapp3.1\AmcsRestApiExample1.csproj.CoreCompileInputs.cache
+C:\Users\richard.morris\Documents\GitHub\example1\AmcsRestApiExample1\obj\Debug\netcoreapp3.1\AmcsRestApiExample1.dll
+C:\Users\richard.morris\Documents\GitHub\example1\AmcsRestApiExample1\obj\Debug\netcoreapp3.1\AmcsRestApiExample1.pdb
+C:\Users\richard.morris\Documents\GitHub\example1\AmcsRestApiExample1\obj\Debug\netcoreapp3.1\AmcsRestApiExample1.genruntimeconfig.cache
