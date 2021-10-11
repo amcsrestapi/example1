@@ -6,16 +6,22 @@ using System.Security.Authentication;
 using System.Threading.Tasks;
 using System.Threading;
 
-namespace AmcsRestApiExample1.AuthenticatedSession
+namespace AmcsRestApiExample1
 {
-    public class PATAuthenticatedSession : HttpClient
+    public class PATAuthenticatedSession
     {
         private readonly string PAT;
+        private string AuthCookie;
+        private HttpClient HttpClient;
+        public Uri Domain {
+            get => HttpClient.BaseAddress;
+        }
 
-        public PATAuthenticatedSession( Uri Domain, string PAT ) : base( new HttpClientHandler() { UseCookies = true } )
+        public PATAuthenticatedSession( string EnvironmentName, string PAT )
         {
             this.PAT = PAT;
-            BaseAddress = Domain;
+            this.HttpClient = new HttpClient();
+            this.HttpClient.BaseAddress = new ApiUri( EnvironmentName ).Uri;
         }
 
         public async Task<bool> Authentication()
@@ -23,28 +29,26 @@ namespace AmcsRestApiExample1.AuthenticatedSession
             var Response = await AuthenticationResponse();
             if( Response.StatusCode != HttpStatusCode.OK )
                 throw new AuthenticationException();
-            return true;
+            foreach( var Cookie in Response.Content.Headers.GetValues("Set-Cookie") )
+            {
+                Console.WriteLine( Cookie );
+            }
+            return await Task.FromResult( true );
         }
 
         public async Task<HttpResponseMessage> AuthenticationResponse()
-            => await SendAsync(
-                new HttpRequestMessage( HttpMethod.Post, BaseAddress )
-                {
-                    Content = new StringContent(
-                        "{ 'privatekey':'"+PAT+ "' }", Encoding.UTF8, "application/json"
-                    )
-                }
-            );
+            => await HttpClient.SendAsync( ApiRequest.AuthWithPat( HttpClient.BaseAddress, this.PAT ) );
 
-        public override async Task<HttpResponseMessage> SendAsync( HttpRequestMessage request, CancellationToken cancellationToken )
+        public async Task<string> ResponseTo( HttpRequestMessage Request )
         {
-            HttpResponseMessage Response = await base.SendAsync( request, cancellationToken );
-            if( Response.StatusCode == HttpStatusCode.Unauthorized )
-            {
-                await Authentication();
-                Response = await base.SendAsync( request, cancellationToken );
-            }
-            return Response;
+            var Response = await HttpClient.SendAsync( Request );
+            Response.EnsureSuccessStatusCode();
+            string ResponseBody = await Response.Content.ReadAsStringAsync();
+            return await Task.FromResult( ResponseBody );
+        }
+
+        public void LogCookies()
+        {
         }
     }
 }
